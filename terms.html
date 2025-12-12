@@ -1,82 +1,174 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <title>SocialBit – Terms of Service | G-Bit</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SocialBit – Terms of Service | G-Bit</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-    h1, h2 { color: #1a1a1a; }
-    h1 { border-bottom: 3px solid #0a74da; padding-bottom: 0.3em; }
-    p, li { font-size: 1rem; }
-    ul { margin-left: 1.2em; }
-    .section { margin-bottom: 2em; }
-    .footer { font-size: 0.85rem; color: #666; margin-top: 3em; border-top: 1px solid #ddd; padding-top: 1em; }
+    :root{
+      --bg:#0b1220; --stroke:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.72); --muted2:rgba(255,255,255,.55);
+      --accent:#5B8CFF; --accent2:#7AE3FF;
+      --radius:18px; --shadow:0 18px 55px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 520px at 18% 0%, rgba(91,140,255,.35), transparent 60%),
+        radial-gradient(760px 520px at 85% 10%, rgba(122,227,255,.22), transparent 55%),
+        radial-gradient(900px 620px at 50% 100%, rgba(91,140,255,.18), transparent 60%),
+        var(--bg);
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.92; text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:14px 16px; border:1px solid var(--stroke);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius:var(--radius); box-shadow:var(--shadow);
+    }
+    .brand{display:flex; align-items:center; gap:14px; min-width:0;}
+    .brand img{height:30px; width:auto; display:block}
+    .brand .meta b{display:block; font-size:14px}
+    .brand .meta span{display:block; font-size:12px; color:var(--muted2); margin-top:2px}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px; border:1px solid var(--stroke);
+      background:rgba(255,255,255,.06); color:var(--muted); font-size:12px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background:linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow:0 0 0 5px rgba(91,140,255,.14);
+    }
+    header{margin-top:22px}
+    h1{margin:18px 0 6px; font-size:38px; line-height:1.05; letter-spacing:-0.02em}
+    .subtitle{color:var(--muted); font-size:15px; line-height:1.6; max-width:74ch}
+    .updated{margin-top:10px; color:var(--muted2); font-size:12px}
+    .card{
+      margin-top:16px;
+      border:1px solid var(--stroke);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    h2{margin:0 0 10px; font-size:16px; letter-spacing:.2px}
+    p{margin:0 0 10px; color:var(--muted); line-height:1.7}
+    ul{margin:10px 0 0 20px; color:var(--muted); line-height:1.7}
+    li{margin:6px 0}
+    footer{
+      margin-top:18px; padding-top:18px;
+      color:var(--muted2); font-size:12px; line-height:1.6;
+      border-top:1px solid rgba(255,255,255,.12);
+    }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://g-bit.be/" target="_blank" rel="noopener">
+        <img alt="G-Bit logo" src="https://gbit.b-cdn.net/wp-content/uploads/2024/01/Logo-G-bit_kleiner.svg">
+        <div class="meta">
+          <b>SocialBit</b>
+          <span>Analytics voor social media content • door G-Bit</span>
+        </div>
+      </a>
+      <div class="pill">
+        <span class="dot"></span>
+        <span>Terms of Service</span>
+      </div>
+    </div>
 
-  <h1>Terms of Service – SocialBit</h1>
+    <header>
+      <h1>Terms of Service</h1>
+      <p class="subtitle">
+        Deze voorwaarden regelen het gebruik van SocialBit door klanten die hun eigen accounts koppelen via officiële API’s.
+      </p>
+      <div class="updated">Laatst bijgewerkt: 2025-12-12</div>
+    </header>
 
-  <div class="section">
-    <h2>1. Definities</h2>
-    <p>
-      “SocialBit” verwijst naar het analytics-platform van G-Bit BV, gevestigd te Tremelo, België.  
-      “Klant” verwijst naar de gebruiker die zich registreert en API’s koppelt voor eigen accountdata.
-    </p>
+    <div class="card">
+      <h2>1. Partijen</h2>
+      <p>
+        SocialBit wordt aangeboden door <strong>G-Bit BV</strong> (Kleine Bollostraat 9, 3120 Tremelo, België • BTW BE0685373393).
+        Contact: <a href="mailto:info@g-bit.be">info@g-bit.be</a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>2. Dienst</h2>
+      <p>
+        SocialBit levert dashboards/rapporten op basis van data die de klant koppelt via officiële API’s (bv. TikTok OAuth).
+        De klant beheert zijn eigen toegang (tokens/keys) en autorisaties.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>3. Toegestaan gebruik</h2>
+      <ul>
+        <li>Alleen data verwerken waarvoor je rechten/toestemming hebt.</li>
+        <li>De voorwaarden van gekoppelde platformen (bv. TikTok) naleven.</li>
+        <li>Geen toegang proberen te krijgen tot data van andere klanten.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Verantwoordelijkheid klant</h2>
+      <ul>
+        <li>Je bent verantwoordelijk voor accountbeveiliging en het beheer van tokens/keys.</li>
+        <li>Je garandeert dat je SocialBit rechtmatig gebruikt (incl. privacywetgeving/GDPR waar van toepassing).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. Beschikbaarheid & wijzigingen</h2>
+      <p>
+        We streven naar een stabiele dienst, maar garanderen geen ononderbroken beschikbaarheid.
+        Features kunnen wijzigen op basis van platform-API’s of productontwikkeling.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>6. Intellectuele eigendom</h2>
+      <p>
+        SocialBit (software, UI, branding) blijft eigendom van G-Bit BV.
+        Klantdata blijft eigendom van de klant en/of het bronplatform.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>7. Aansprakelijkheid</h2>
+      <p>
+        SocialBit wordt geleverd “as-is”. Voor zover wettelijk toegestaan is G-Bit BV niet aansprakelijk
+        voor indirecte schade, winstderving of dataverlies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>8. Beëindiging</h2>
+      <p>
+        De klant kan stopzetten. Bij misbruik of schending van voorwaarden kan toegang worden opgeschort.
+        Dataretentie/verwijdering volgt de Privacy Policy.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>9. Toepasselijk recht</h2>
+      <p>Belgisch recht is van toepassing. Bevoegde rechtbank: de rechtbanken van België (zoals wettelijk bepaald).</p>
+    </div>
+
+    <footer>
+      © 2025 SocialBit • Een dienst van G-Bit BV • Kleine Bollostraat 9, 3120 Tremelo • info@g-bit.be • BTW BE0685373393
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>2. Dienstverlening</h2>
-    <p>
-      SocialBit biedt data-analyse en dashboards op basis van API’s die de klant zelf koppelt via officiële methodes zoals
-      OAuth.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>3. Acceptatie voorwaarden</h2>
-    <p>
-      Door SocialBit te gebruiken accepteer je deze voorwaarden en de toepasselijke API-voorwaarden van gekoppelde platformen
-      (bijv. TikTok).
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>4. Verantwoordelijkheden klant</h2>
-    <ul>
-      <li>Je bent zelf verantwoordelijk voor het beheer van API-keys en toegangstokens.</li>
-      <li>Je garandeert dat je gerechtigd bent de gekoppelde data te gebruiken.</li>
-      <li>Je respecteert de applicable wetgeving en de voorwaarden van de gekoppelde platformen.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>5. Beschikbaarheid</h2>
-    <p>
-      SocialBit streeft naar betrouwbare beschikbaarheid, maar garandeert geen ononderbroken dienst.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>6. Intellectueel eigendom</h2>
-    <p>
-      Alle software en design van SocialBit zijn eigendom van G-Bit BV. Klantdata blijft eigendom van de klant en/of
-      het gekoppelde platform.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>7. Aansprakelijkheid</h2>
-    <p>
-      SocialBit wordt geleverd “as-is”. G-Bit BV is, voor zover wettelijk toegestaan, niet aansprakelijk voor indirecte
-      schade, dataverlies of bedrijfsschade.
-    </p>
-  </div>
-
-  <div class="footer">
-    <p>© 2025 SocialBit – een dienst van G-Bit BV • info@g-bit.be • Kleine Bollostraat 9, 3120 Tremelo, België</p>
-  </div>
-
 </body>
 </html>
