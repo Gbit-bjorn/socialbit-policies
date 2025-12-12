@@ -1,92 +1,242 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <title>SocialBit – Privacy Policy | G-Bit</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SocialBit – Privacy Policy | G-Bit</title>
+
+  <!-- Modern, clean type (lijkt sterk op hedendaagse agency-sites) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; }
-    h1, h2 { color: #1a1a1a; }
-    h1 { border-bottom: 3px solid #0a74da; padding-bottom: 0.3em; }
-    p, li { font-size: 1rem; }
-    ul { margin-left: 1.2em; }
-    .section { margin-bottom: 2em; }
-    .footer { font-size: 0.85rem; color: #666; margin-top: 3em; border-top: 1px solid #ddd; padding-top: 1em; }
+    :root{
+      /* Pas gerust aan als je exacte brand hex-codes wil */
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.07);
+      --card: rgba(255,255,255,.08);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.55);
+
+      /* Accent: “tech/agency blue” (veilig als merk-accent) */
+      --accent: #5B8CFF;
+      --accent2:#7AE3FF;
+
+      --radius: 18px;
+      --shadow: 0 18px 55px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 18% 0%, rgba(91,140,255,.35), transparent 60%),
+        radial-gradient(760px 520px at 85% 10%, rgba(122,227,255,.22), transparent 55%),
+        radial-gradient(900px 620px at 50% 100%, rgba(91,140,255,.18), transparent 60%),
+        var(--bg);
+    }
+
+    a{color:inherit; text-decoration: none}
+    a:hover{opacity:.92; text-decoration: underline}
+
+    .wrap{max-width: 980px; margin: 0 auto; padding: 28px 18px 60px;}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px; padding:14px 16px;
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.05));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .brand{display:flex; align-items:center; gap:14px; min-width: 0;}
+    .brand img{height:30px; width:auto; display:block}
+    .brand .meta{min-width:0}
+    .brand .meta b{display:block; font-size:14px; letter-spacing:.2px}
+    .brand .meta span{display:block; font-size:12px; color:var(--muted2); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 12px;
+      border-radius: 999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .dot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 5px rgba(91,140,255,.14);
+    }
+
+    header{margin-top: 22px;}
+    h1{
+      margin: 18px 0 6px;
+      font-size: 38px; line-height:1.05;
+      letter-spacing: -0.02em;
+    }
+    .subtitle{color:var(--muted); font-size:15px; line-height:1.6; max-width: 74ch;}
+    .updated{margin-top:10px; color:var(--muted2); font-size: 12px;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .card{
+      border:1px solid var(--stroke);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border-radius: var(--radius);
+      padding: 18px 18px;
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+      display:flex; align-items:center; gap:10px;
+    }
+    .badge{
+      font-size: 12px;
+      color: rgba(255,255,255,.85);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(91,140,255,.18);
+      border: 1px solid rgba(91,140,255,.28);
+    }
+    p{margin:0 0 10px; color:var(--muted); line-height:1.7}
+    ul{margin:10px 0 0 20px; color:var(--muted); line-height:1.7}
+    li{margin: 6px 0}
+    code{background: rgba(255,255,255,.08); padding: 2px 6px; border-radius: 8px; border:1px solid var(--stroke); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.95em;}
+
+    footer{
+      margin-top: 18px;
+      padding-top: 18px;
+      color: var(--muted2);
+      font-size: 12px;
+      line-height: 1.6;
+      border-top: 1px solid rgba(255,255,255,.12);
+    }
+
+    @media (min-width: 820px){
+      .grid{grid-template-columns: 1fr 1fr;}
+      .card.span2{grid-column: 1 / -1;}
+    }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="https://g-bit.be/" target="_blank" rel="noopener">
+        <img alt="G-Bit logo" src="https://gbit.b-cdn.net/wp-content/uploads/2024/01/Logo-G-bit_kleiner.svg">
+        <div class="meta">
+          <b>SocialBit</b>
+          <span>Analytics voor social media content • door G-Bit</span>
+        </div>
+      </a>
+      <div class="pill" title="Policy document">
+        <span class="dot"></span>
+        <span>Privacy Policy</span>
+      </div>
+    </div>
 
-  <h1>Privacy Policy – SocialBit</h1>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">
+        SocialBit is een analytics-platform voor klanten. Klanten koppelen hun eigen social accounts via officiële API’s
+        (bijv. TikTok) en gebruiken hun eigen tokens/sleutels en toestemming. Elke klant werkt in een eigen database-omgeving.
+      </p>
+      <div class="updated">Laatst bijgewerkt: 2025-12-12</div>
+    </header>
 
-  <div class="section">
-    <h2>1. Wie zijn wij?</h2>
-    <p>
-      SocialBit is een dienst van <strong>G-Bit BV</strong>, een Belgisch IT-bedrijf gespecialiseerd in digitale oplossingen,
-      webdevelopment, design en consultancy, gevestigd te Kleine Bollostraat 9, 3120 Tremelo, België (BTW BE0685373393).  
-      Contact: <a href="mailto:info@g-bit.be">info@g-bit.be</a>. :contentReference[oaicite:1]{index=1}
-    </p>
+    <section class="grid">
+      <div class="card span2">
+        <h2>1. Verwerkingsverantwoordelijke <span class="badge">G-Bit</span></h2>
+        <p>
+          SocialBit is een dienst van <strong>G-Bit BV</strong>.
+          Contact: <a href="mailto:info@g-bit.be">info@g-bit.be</a>.
+        </p>
+        <p>
+          Adres: Kleine Bollostraat 9, 3120 Tremelo (BE) • BTW: BE0685373393.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>2. Welke gegevens verwerken we?</h2>
+        <p>Afhankelijk van de gekoppelde API/scopes kunnen we o.a. verwerken:</p>
+        <ul>
+          <li>Accountbasisinfo (account-id/naam, profielvelden die de API toestaat)</li>
+          <li>Contentoverzichten (video/post IDs, publicatiedatum, captions/hashtags indien toegestaan)</li>
+          <li>Analytics/metrics (views, likes, comments, shares, etc. indien toegestaan)</li>
+          <li>Technische data (logs, errors, timestamps) voor werking en beveiliging</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. Doeleinden</h2>
+        <ul>
+          <li>Dashboards, rapporten en analyses leveren</li>
+          <li>Platform beveiligen, misbruik voorkomen</li>
+          <li>Support en troubleshooting</li>
+          <li>Administratie/facturatie (indien van toepassing)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. Scheiding per klant</h2>
+        <p>
+          Elke klant krijgt een <strong>eigen database</strong> (logisch en/of fysiek gescheiden).
+          Klanten kunnen enkel hun eigen data en gekoppelde accounts zien.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>5. Rechtsgrond (GDPR)</h2>
+        <p>
+          We verwerken data op basis van (a) uitvoering van een overeenkomst,
+          (b) toestemming via OAuth/API-koppeling waar vereist, en/of
+          (c) gerechtvaardigd belang (beveiliging en verbetering).
+        </p>
+      </div>
+
+      <div class="card span2">
+        <h2>6. Bewaring, delen en beveiliging</h2>
+        <p>
+          We bewaren data niet langer dan nodig voor het doel. Standaard: zolang het klantaccount actief is en
+          tot maximaal <strong>24 maanden</strong> na stopzetting, tenzij wettelijke verplichtingen anders vereisen.
+        </p>
+        <p>
+          We verkopen geen persoonsgegevens. Delen gebeurt enkel met noodzakelijke verwerkers (bv. hosting)
+          en waar nodig onder contract (DPA/verwerkersovereenkomst).
+        </p>
+        <p>
+          Beveiliging omvat o.a. HTTPS, toegangscontrole, logging, tenant-isolatie, en encryptie waar relevant
+          (bv. tokens “at rest”).
+        </p>
+      </div>
+
+      <div class="card span2">
+        <h2>7. Rechten & contact</h2>
+        <p>
+          Vragen of verzoeken (inzage/verwijdering/rectificatie): mail naar
+          <a href="mailto:info@g-bit.be">info@g-bit.be</a>.
+        </p>
+        <p>
+          Let op: gekoppelde platformen (zoals TikTok) hebben eigen voorwaarden en privacyregels; SocialBit gebruikt officiële API’s.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 SocialBit • Een dienst van G-Bit BV • Kleine Bollostraat 9, 3120 Tremelo • info@g-bit.be • BTW BE0685373393
+    </footer>
   </div>
-
-  <div class="section">
-    <h2>2. Wat is SocialBit?</h2>
-    <p>
-      SocialBit biedt klanten analytics voor hun social media content via officiële API’s (zoals TikTok) met expliciete
-      toestemming van de klant. Data wordt alleen verzameld via erkende kanalen.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>3. Verwerkte gegevens</h2>
-    <ul>
-      <li>Basis account- en profielinformatie</li>
-      <li>Lijsten met eigen posts en metadata</li>
-      <li>Analytics zoals views, interacties, etc. (afhankelijk van API-scopes)</li>
-      <li>Technische en loggegevens (voor de werking van SocialBit)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>4. Data-scheiding per klant</h2>
-    <p>
-      Elke klant werkt in een gescheiden omgeving. Data van één klant is nooit zichtbaar voor anderen.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>5. Rechtsgrond en GDPR</h2>
-    <p>
-      Wij verwerken persoonsgegevens op basis van de contractuele overeenkomst met de klant en de expliciete toestemming
-      die de klant geeft bij het koppelen van externe API’s (zoals TikTok). Wij handelen volgens de GDPR.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>6. Bewaringstermijn</h2>
-    <p>
-      Data wordt bewaard zolang de klant een actief contract heeft en maximaal 24 maanden daarna, tenzij andere wettelijke
-      verplichtingen gelden.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>7. Delen met derden</h2>
-    <p>
-      SocialBit deelt geen persoonsgegevens met derden voor commerciële doeleinden. Data kan gedeeld worden met
-      verwerkers die noodzakelijk zijn voor de werking (zoals hosting), met volledige naleving van GDPR.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>8. Beveiliging</h2>
-    <p>
-      Wij zetten technische en organisatorische maatregelen in om je data te beschermen, zoals HTTPS, encryptie,
-      gescheiden klantomgevingen en toegangsbeveiliging.
-    </p>
-  </div>
-
-  <div class="footer">
-    <p>© 2025 SocialBit – een dienst van G-Bit BV • Kleine Bollostraat 9, 3120 Tremelo, België • info@g-bit.be</p>
-  </div>
-
 </body>
 </html>
